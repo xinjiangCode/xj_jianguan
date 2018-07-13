@@ -1,0 +1,160 @@
+body{
+    width: 100%;
+    max-width: 1920px;
+    min-width: 1200px;
+    margin: 0 auto;
+}
+.main{
+    width: 100%;
+}
+.lg_banner{
+    width: 100%;
+    max-width: 1920px;
+    min-width: 1200px;
+    height: 750px;
+    background: url("../images/lg_ban.png") center center no-repeat;
+}
+.lg_banner>div{
+   width: 1200px;
+   margin: 0 auto;
+   position: relative;
+}
+.lg_banner>div>img{
+    display: block;
+    width: 413px;
+    position: absolute;
+    top: 45px;
+    left: 42px;
+}
+.lg_content{
+    width: 410px;
+    height: 460px;
+    position: absolute;
+    right: 30px;
+    top: 145px;
+    background: white;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+}
+.content_top{
+    width: 100%;
+    height: 60px;
+    line-height: 60px;
+    margin-top: 10px;
+    font-size: 16px;
+    color:#333333;
+    text-align: center;
+}
+.line{
+    width: 100%;
+    height: 4px;
+    background: #e6f0ff;
+}
+.line>span{
+    display: block;
+    width: 120px;
+    height: 4px;
+    background: #6ea3ff;
+    margin: 0 auto;
+}
+.content_mid{
+    width: 310px;
+    margin: 0 auto;
+    margin-top: 38px;
+}
+.content_mid>input{
+    display: block;
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
+    outline: none;
+    border: 1px solid #e7e7e7;
+    text-indent: 15px;
+}
+.content_mid .my_pass{
+    border-top: 0;
+}
+.lg_rember{
+    width: 100%;
+    height: 33px;
+    line-height: 33px;
+    margin-top: 30px;
+    font-size: 14px;
+    color: #666666;
+    position: relative;    
+}
+.lg_rember span{
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    background: url("../images/xuan.png") 0 0 no-repeat;
+    background-size: 100% 100%;
+}
+.err_msg{
+    width: 100%;
+    height: 30px;
+    line-height: 30px;
+    font-size: 14px;
+    color: #e86565;
+    position: absolute;
+    top: -30px;
+}
+.lg_btn{
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    font-size: 18px;
+    color: white;
+    background: #6ea3ff;
+    margin-top: 50px;
+    cursor: pointer;
+}
+.fogot_pass{
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    font-size: 14px;
+    color: #666666;
+    border: 1px solid #6ea3ff;
+    margin-top: 20px;
+    cursor: pointer;
+}
+.foot{
+    width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 12px;
+    color: #8d8c8c;
+    margin-top: 55px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
