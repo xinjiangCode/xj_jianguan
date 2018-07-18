@@ -63,3 +63,11 @@ input:-ms-input-placeholder, textarea:-ms-input-placeholder {
 color: #cccccc; 
 } 
 
+.fl {
+	float: left;
+}
+
+.fr {
+	float: right;
+}
+

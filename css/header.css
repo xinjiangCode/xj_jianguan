@@ -1,0 +1,83 @@
+.header_bg {
+	background: url('../images/header_bg.png') no-repeat;
+	height: 208px;
+}
+
+.father {
+	width: 1200px;
+	margin: 0 auto;
+}
+
+.logo_info {
+	height: 121px;
+	line-height: 121px;
+	padding-left: 23px;
+	padding-right: 40px;
+	box-sizing: border-box;
+}
+
+.jianguan_info.fr {
+    color: #fff;
+    font-size: 14px;
+}
+
+.jianguan_logo {
+	margin-top: 27px;
+}
+
+span.shu_line {
+    width: 1px;
+    height: 17px;
+    /*background: #fff;
+    opacity: 0.5;*/
+    background: #acbfdd;
+    display: inline-block;
+    vertical-align: sub;
+    margin-right: 30px;
+}
+
+.avatar {
+	vertical-align: sub;
+}
+
+.chengyunshang_name {
+	margin-left: 8px;
+	margin-right: 22px;
+}
+
+.logout {
+	cursor: pointer;
+}
+
+.title_ul {
+	height: 86px;
+	border-bottom: 1px solid #f9f9f9;
+}
+
+.title_ul li {
+	text-align: center;
+	height: 100%;
+	float: left;
+	width: 239px;
+	line-height: 86px;
+	border-right: 1px solid #f9f9f9; 
+	cursor: pointer;
+}
+
+.title_ul li img {
+	margin-right: 12px;
+	vertical-align: sub;
+}
+
+.title_ul li a {
+	color: #999;
+	width: 100%;
+    height: 100%;
+    display: inline-block;
+   	background: #fff; 
+}
+
+.title_ul li.tilte_current a {
+	background: #f9f9f9;
+	color: #5892f5;
+}
