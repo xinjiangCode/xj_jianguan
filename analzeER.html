@@ -9,13 +9,14 @@
     <meta name="format-detection" content="telephone=no" />
     <title>监管平台</title>
     <link rel="stylesheet" href="css/reset.css">
-    <!--<link rel="stylesheet" href="css/login.css">-->
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/page.css">
     <style>
         *{box-sizing: border-box}
         .pubTitle{height: 208px;width: 100%;min-width: 1200px;background: url("./images/cf_pubTitleBack.png") center center/100% 100%;}
         .clearFloat::after,.clearFloat::before{content: "";clear: both;display: block;}
         .main{background-color: #f3f3f3;width: 100%;padding-bottom: 60px;}
-        .container{width: 1200px;margin: 0 auto;box-shadow: 0 4px 10px 4px #e2e2e2 ;border: 1px solid #e2e2e2;padding: 73px 30px 60px 30px;background-color: #fafafa;}
+        .container{width: 1200px;margin: 0 auto;box-shadow: 0 4px 10px 4px #e2e2e2 ;border: 1px solid #e2e2e2;padding: 0px 30px 60px 30px;background-color: #fafafa;}
         .monitorList li{width: 100px;height: 40px;line-height: 40px;text-align: center;color: #666666;font-size: 16px;float: left;}
         .monitorList li:hover{background-color: #ffffff;color: #5892f5;}
         .monitorList li.on{background-color: #ffffff;color: #5892f5;}
@@ -26,25 +27,47 @@
         .listBox  td,.listBox  th{height: 40px;line-height: 40px;}
          table{width: 100%; border-spacing:0;}
         .cf_btnA{font-size: 14px;color: #5892f5;}
+        table{margin-bottom: 12px;}
+        #test1, #test2 {
+            width: 120px;
+            height: 28px;
+            text-indent: 10px;
+            border-radius: 2px;
+            border: 1px solid #d6d6d6;
+        }
 
-        .baojing,.car{width: 562px;height: 388px;float:left;background-color: #ffffff;border:1px solid #ebedf0;box-shadow: 0 0 10px 4px #ebedf0 ;}
-        .baojingTitle,.carTitle{height: 45px;line-height: 45px;color: #666666;width: 500px;margin: 0 auto;border-bottom: 1px solid #ebedf0;}
-        #baojing,#car{width: 550px;height: 340px;}
+        .search_btn {
+            display: inline-block;
+            width: 91px;
+            height: 30px;
+            background: #5892f5;
+            text-align: center;
+            font-size: 12px;
+            color: #fff;
+            margin-left: 11px;
+            line-height: 30px;
+            border-radius: 2px;
+        }
+
+
+
+
     </style>
 </head>
+
 <body>
+<script src="./js/header.js"></script>
     <div class="main">
-        <div class="pubTitle ">
-            <div>
-                <div class="logo">
-                    <img src="./images/cf_logo.png" alt="">
+        <div class="container">
+            <div class="clearfix">
+                <div class="fr" style="margin-top: 21px; margin-right: 30px">
+                    <input type="text" class="date-input laydate-icon" placeholder="请选择时间" id="test1">
+                    <span style="height: 38px;line-height: 38px;">&nbsp;-&nbsp; </span>
+                    <input type="text" class="date-input laydate-icon" placeholder="请选择时间" id="test2">
+
+                    <span class="search_btn">查询</span>
                 </div>
             </div>
-            <div>
-
-            </div>
-        </div>
-        <div class="container">
             <div class="monitor">
                 <ul class="monitorList clearfix">
                     <li class="on">企业监控</li>
@@ -101,113 +124,67 @@
                             </tr>
                         </tbody>
                     </table>
-                    <div class="cf_btnA" style="float: right;margin: 10px 22px 12px 0;">查看更多＞</div>
+                    <!--<div class="cf_btnA" style="float: right;margin: 10px 22px 12px 0;">查看更多＞</div>-->
                 </div>
             </div>
-
-            <div class="cf_echarts clearfix">
-                <div class="baojing" style="margin-right: 8px;">
-                    <div class="baojingTitle">报警统计</div>
-                    <div id="baojing">
-
-                    </div>
-                </div>
-                <div class="car" style="float: right;">
-                    <div class="carTitle">车辆监控</div>
-                    <div id="car">
-
-                    </div>
+            <div class="" style="text-align: center;height: 75px;padding-top: 17px;margin-bottom: 0;">
+                <ul class="pagination" id="page1" style="position: static;margin-bottom: 0;"></ul>
+                <div class="pageJump">
+                    <span class="allPageN">1/200</span>
+                    <i style="margin-left: 12px;">共200页</i>，
+                    <span>到第</span>
+                    <input type="text"/>
+                    <span>页</span>
+                    <button type="button" class="button">GO</button>
                 </div>
             </div>
+            <!--<div class="cf_echarts clearfix">-->
+                <!--<div class="baojing" style="margin-right: 8px;">-->
+                    <!--<div class="baojingTitle">报警统计</div>-->
+                    <!--<div id="baojing">-->
+
+                    <!--</div>-->
+                <!--</div>-->
+                <!--<div class="car" style="float: right;">-->
+                    <!--<div class="carTitle">车辆监控</div>-->
+                    <!--<div id="car">-->
+
+                    <!--</div>-->
+                <!--</div>-->
+            <!--</div>-->
         </div>
     </div>
     <script src="js/jquery-3.2.1.min.js"></script>
     <script src="js/echarts.min.js"></script>
+<script src="./js/pager.js" type="text/javascript" charset="utf-8"></script>
+<script src="./laydate/laydate.js"></script> <!-- 改成你的路径 -->
+<script>
 
-    <script>
-        // 基于准备好的dom，初始化echarts实例
-        var myChart = echarts.init(document.getElementById('baojing'));
-        //环形图  预警
-        var option =  {
-            legend: {
-//                orient: 'vertical',
-//                x: 'center',
-//                y:'bottom',
-                left:'25',
-                bottom:'30',
-                data:['政治风险','廉政风险','渎职风险','绩效风险'],
-            },
-            title:{
-                text: '294',
-                subtext: '总报警统计',
-                size:'200',
-                x: 'center',
-                y:'center',
-                top:'100',
-                textStyle:{
-                    fontSize:36,
-                    color:'#333'
-                },
-                subtextStyle:{
-                    fontSize:14
-                }
-            },
-            series: [
-                {
-                    center: ['50%', '40%'],
-                    name:'访问来源',
-                    type:'pie',
-                    radius: ['40%', '60%'],
-                    data:[
-                        {value:25, name:'政治风险'},
-                        {value:25, name:'廉政风险'},
-                        {value:25, name:'渎职风险'},
-                        {value:25, name:'绩效风险'}
-                    ]
-                }
-            ]
-        };
-        myChart.setOption(option);
-
-        // 基于准备好的dom，初始化echarts实例
-        var myChart1 = echarts.init(document.getElementById('car'));
-        //环形图   车辆
-        var option1 =  {
-            legend: {
-                orient: 'vertical',
-                x: 'left',
-                data:['在线行驶车辆','在线停车车辆'],
-                left:'25',
-                top:'10'
-            },
-            title:{
-                text: '2941',
-                subtext: '在线车辆总数',
-                size:'200',
-                x: 'center',
-                y:'center',
-                top:'140',
-                textStyle:{
-                    fontSize:36,
-                    color:'#333'
-                },
-                subtextStyle:{
-                    fontSize:14
-                }
-            },
-            series: [
-                {
-                    name:'访问来源',
-                    type:'pie',
-                    radius: ['40%', '60%'],
-                    data:[
-                        {value:25, name:'在线行驶车辆'},
-                        {value:25, name:'在线停车车辆'},
-                    ]
-                }
-            ]
-        };
-        myChart1.setOption(option1);
-    </script>
+    $('.objListBox>div:nth-child(5n)').css('margin-right','0');
+    Page({
+        num: 200,
+        elem: $('#page1'),
+        callback: function(n) {
+            console.log(n);
+        }
+    });
+    laydate({
+        elem: '#test1',
+        format: 'YYYY-MM-DD',
+        istime: false,
+        choose: function(dates){ //选择好日期的回调
+            startTime = dates;
+        }
+    });
+    laydate({
+        elem: '#test2',
+        format: 'YYYY-MM-DD',
+        istime: false,
+        choose: function(dates){ //选择好日期的回调
+            endTime = dates;
+        }
+    });
+    laydate.skin('yahui');  //加载皮肤，参数lib为皮肤名
+</script>
 </body>
 </html>

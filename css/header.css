@@ -50,6 +50,7 @@ span.shu_line {
 }
 
 .title_ul {
+	margin-top: 1px;
 	height: 86px;
 	border-bottom: 1px solid #f9f9f9;
 }
@@ -58,7 +59,7 @@ span.shu_line {
 	text-align: center;
 	height: 100%;
 	float: left;
-	width: 239px;
+	width: 240px;
 	line-height: 86px;
 	border-right: 1px solid #f9f9f9; 
 	cursor: pointer;
