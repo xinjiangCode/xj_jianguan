@@ -4,30 +4,8 @@
 	background: #f9f9f9;
 }
 
-#test1, #test2 {
-	width: 120px;
-	height: 28px;
-	text-indent: 10px;
-	border-radius: 2px;
-	border: 1px solid #d6d6d6;
-}
-
-.search_btn {
-	display: inline-block;
-	width: 91px;
-	height: 30px;
-	background: #5892f5;
-	text-align: center;
-	font-size: 12px;
-	color: #fff;
-	margin-left: 11px;
-	line-height: 30px;
-	border-radius: 2px;
-	cursor: pointer;
-}
-
 .cont {
-	margin-top: 22px;
+	padding-top: 32px;
 }
 
 .cont ul {
@@ -83,19 +61,12 @@
 	margin-top: 28px;
 }
 
-.order_zoushi {
-	height: 407px;
-	background: #fff;
-	width: 1140px;
-	margin-left: 30px;
-}
-
-.order_zoushi_title {
-	height: 47px;
-	line-height: 47px;
+.order_list {
+	height: 54px;
+	border: 1px solid #f1f2f4;
+	border-top: 2px solid #f1f2f4;
+	color: #666666;
 	font-size: 16px;
-	color: #666;
-	padding-left: 26px;
-	border-bottom: 1px solid #eeeeee;
+	line-height: 54px;
+	padding-left: 23px;
 }
-

@@ -9,7 +9,6 @@
     <meta name="format-detection" content="telephone=no" />
     <title>监管平台</title>
     <link rel="stylesheet" href="../css/reset.css">
-    <link rel="stylesheet" href="../css/login.css">
     <link rel="stylesheet" href="../css/header.css">
     <link rel="stylesheet" href="../css/jianguanTongji/jianguanTongji.css">
     <script src="../js/jquery-3.2.1.min.js"></script>
@@ -101,9 +100,14 @@
                     <div class="info_ts_title blue">在途运输</div>
                 </li>
             </ul>
+            <div class="order_zoushi">
+                <div class="order_zoushi_title">订单走势</div>
+                <div id="container" style="height: 358px;"></div>
+            </div>
         </div>
     </div>
     
+    <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/echarts.min.js"></script>
     <script src="../laydate/laydate.js"></script> <!-- 改成你的路径 -->
     <script>
         laydate({
@@ -123,6 +127,65 @@
             } 
         });
         laydate.skin('yahui');  //加载皮肤，参数lib为皮肤名
+    </script>
+
+    <script type="text/javascript">
+        var dom = document.getElementById("container");
+        var myChart = echarts.init(dom);
+        var app = {};
+        option = null;
+        app.title = '堆叠柱状图';
+
+        option = {
+            tooltip : {
+                trigger: 'axis',
+                axisPointer : {            // 坐标轴指示器，坐标轴触发有效
+                    type : 'shadow'        // 默认为直线，可选为：'line' | 'shadow'
+                }
+            },
+            legend: {
+                data:['直接访问','邮件营销','联盟广告']
+            },
+            grid: {
+                left: '3%',
+                right: '4%',
+                bottom: '3%',
+                containLabel: true
+            },
+            xAxis : [
+                {
+                    type : 'category',
+                    data : ['周一','周二','周三','周四','周五','周六','周日']
+                }
+            ],
+            yAxis : [
+                {
+                    type : 'value'
+                }
+            ],
+            series : [
+                {
+                    name:'订单量',
+                    type:'bar',
+                    color: '#31b89a',
+                    width: '29px',
+                    data:[320, 332, 301, 334, 390, 330, 320],
+                    barWidth: 29
+                },
+                {
+                    name:'同比量',
+                    type:'bar',
+                    width: '29px',
+                    color: '#0c5869',
+                    data:[220, 182, 191, 234, 290, 330, 310],
+                    barWidth: 29
+                }
+            ]
+        };
+        ;
+        if (option && typeof option === "object") {
+            myChart.setOption(option, true);
+        }
     </script>
 
 </body>
