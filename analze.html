@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Cache-Control" CONTENT="no-cache">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta name="format-detection" content="telephone=no" />
+    <title>监管平台</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <!--<link rel="stylesheet" href="css/login.css">-->
+    <style>
+        *{box-sizing: border-box}
+        .pubTitle{height: 208px;width: 100%;min-width: 1200px;background: url("./images/cf_pubTitleBack.png") center center/100% 100%;}
+        .clearFloat::after,.clearFloat::before{content: "";clear: both;display: block;}
+        .main{background-color: #f3f3f3;width: 100%;padding-bottom: 60px;}
+        .container{width: 1200px;margin: 0 auto;box-shadow: 0 4px 10px 4px #e2e2e2 ;border: 1px solid #e2e2e2;padding: 73px 30px 60px 30px;background-color: #fafafa;}
+        .monitorList li{width: 100px;height: 40px;line-height: 40px;text-align: center;color: #666666;font-size: 16px;float: left;}
+        .monitorList li:hover{background-color: #ffffff;color: #5892f5;}
+        .monitorList li.on{background-color: #ffffff;color: #5892f5;}
+        .listBox{width: 100%;background-color: #ffffff;border:1px solid #ebedf0;box-shadow: 0 0 10px 4px #ebedf0 ;margin-bottom: 15px;}
+        .listBox td{ text-align: center; margin: 0;padding: 0; }
+        .listBox thead{background-color: #fafafa;border: 1px solid #ebedf0;font-size: 16px;color: #333333;}
+        .listBox tbody{color: #666666;font-size: 14px;}
+        .listBox  td,.listBox  th{height: 40px;line-height: 40px;}
+         table{width: 100%; border-spacing:0;}
+        .cf_btnA{font-size: 14px;color: #5892f5;}
+
+        .baojing,.car{width: 562px;height: 388px;float:left;background-color: #ffffff;border:1px solid #ebedf0;box-shadow: 0 0 10px 4px #ebedf0 ;}
+        .baojingTitle,.carTitle{height: 45px;line-height: 45px;color: #666666;width: 500px;margin: 0 auto;border-bottom: 1px solid #ebedf0;}
+        #baojing,#car{width: 550px;height: 340px;}
+    </style>
+</head>
+<body>
+    <div class="main">
+        <div class="pubTitle ">
+            <div>
+                <div class="logo">
+                    <img src="./images/cf_logo.png" alt="">
+                </div>
+            </div>
+            <div>
+
+            </div>
+        </div>
+        <div class="container">
+            <div class="monitor">
+                <ul class="monitorList clearfix">
+                    <li class="on">企业监控</li>
+                    <li>交易监控</li>
+                    <li>物流监控</li>
+                    <li>实时警情</li>
+                </ul>
+                <div class="listBox clearfix">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>企业名称</th>
+                                <th>总交易量</th>
+                                <th>报警次数</th>
+                                <th>安全评分</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>中泰化学</td>
+                                <td>350000</td>
+                                <td>1</td>
+                                <td>10</td>
+                            </tr>
+                            <tr>
+                                <td>中泰化学</td>
+                                <td>350000</td>
+                                <td>1</td>
+                                <td>10</td>
+                            </tr>
+                            <tr>
+                                <td>中泰化学</td>
+                                <td>350000</td>
+                                <td>1</td>
+                                <td>10</td>
+                            </tr>
+                            <tr>
+                                <td>中泰化学</td>
+                                <td>350000</td>
+                                <td>1</td>
+                                <td>10</td>
+                            </tr>
+                            <tr>
+                                <td>中泰化学</td>
+                                <td>350000</td>
+                                <td>1</td>
+                                <td>10</td>
+                            </tr>
+                            <tr>
+                                <td>中泰化学</td>
+                                <td>350000</td>
+                                <td>1</td>
+                                <td>10</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div class="cf_btnA" style="float: right;margin: 10px 22px 12px 0;">查看更多＞</div>
+                </div>
+            </div>
+
+            <div class="cf_echarts clearfix">
+                <div class="baojing" style="margin-right: 8px;">
+                    <div class="baojingTitle">报警统计</div>
+                    <div id="baojing">
+
+                    </div>
+                </div>
+                <div class="car" style="float: right;">
+                    <div class="carTitle">车辆监控</div>
+                    <div id="car">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/echarts.min.js"></script>
+
+    <script>
+        // 基于准备好的dom，初始化echarts实例
+        var myChart = echarts.init(document.getElementById('baojing'));
+        //环形图  预警
+        var option =  {
+            legend: {
+//                orient: 'vertical',
+//                x: 'center',
+//                y:'bottom',
+                left:'25',
+                bottom:'30',
+                data:['政治风险','廉政风险','渎职风险','绩效风险'],
+            },
+            title:{
+                text: '294',
+                subtext: '总报警统计',
+                size:'200',
+                x: 'center',
+                y:'center',
+                top:'100',
+                textStyle:{
+                    fontSize:36,
+                    color:'#333'
+                },
+                subtextStyle:{
+                    fontSize:14
+                }
+            },
+            series: [
+                {
+                    center: ['50%', '40%'],
+                    name:'访问来源',
+                    type:'pie',
+                    radius: ['40%', '60%'],
+                    data:[
+                        {value:25, name:'政治风险'},
+                        {value:25, name:'廉政风险'},
+                        {value:25, name:'渎职风险'},
+                        {value:25, name:'绩效风险'}
+                    ]
+                }
+            ]
+        };
+        myChart.setOption(option);
+
+        // 基于准备好的dom，初始化echarts实例
+        var myChart1 = echarts.init(document.getElementById('car'));
+        //环形图   车辆
+        var option1 =  {
+            legend: {
+                orient: 'vertical',
+                x: 'left',
+                data:['在线行驶车辆','在线停车车辆'],
+                left:'25',
+                top:'10'
+            },
+            title:{
+                text: '2941',
+                subtext: '在线车辆总数',
+                size:'200',
+                x: 'center',
+                y:'center',
+                top:'140',
+                textStyle:{
+                    fontSize:36,
+                    color:'#333'
+                },
+                subtextStyle:{
+                    fontSize:14
+                }
+            },
+            series: [
+                {
+                    name:'访问来源',
+                    type:'pie',
+                    radius: ['40%', '60%'],
+                    data:[
+                        {value:25, name:'在线行驶车辆'},
+                        {value:25, name:'在线停车车辆'},
+                    ]
+                }
+            ]
+        };
+        myChart1.setOption(option1);
+    </script>
+</body>
+</html>
