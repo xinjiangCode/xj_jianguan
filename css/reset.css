@@ -62,7 +62,7 @@ color: #cccccc;
 input:-ms-input-placeholder, textarea:-ms-input-placeholder { 
 color: #cccccc; 
 } 
-
+input{text-indent: 10px;}
 .fl {
 	float: left;
 }

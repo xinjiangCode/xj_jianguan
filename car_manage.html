@@ -18,8 +18,8 @@
     
     <div class="main_main">
         <div>
-            <div class="map">
-                <img src="./images/map.png" alt="">
+            <div class="map" id="gaodeMap">
+                <!--<img src="./images/map.png" alt="">-->
             </div>
             <div class="map_info">
                 <ul class="clearfix">
@@ -148,6 +148,12 @@
             </div>
         </div>
     </div>
-
+    <script src="https://webapi.amap.com/maps?v=1.4.8&key=ab9f3018029f55bc359309286a19af59"></script>
+    <script type="text/javascript">
+        var map = new AMap.Map('gaodeMap', {
+            center:[117.000923,36.675807],
+            zoom:11
+        });
+    </script>
 </body>
 </html>

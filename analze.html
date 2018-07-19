@@ -93,7 +93,7 @@
                             </tr>
                         </tbody>
                     </table>
-                    <div class="cf_btnA" style="float: right;margin: 10px 22px 12px 0;">查看更多＞</div>
+                    <div class="cf_btnA seeMore" style="float: right;margin: 10px 22px 12px 0;">查看更多＞</div>
                 </div>
             </div>
 
@@ -116,6 +116,12 @@
     <script src="js/common.js"></script>
     <script src="js/jquery-3.2.1.min.js"></script>
     <script src="js/echarts.min.js"></script>
+<script>
+    $(".seeMore").click(function () {
+        window.location.href="./analzeER.html";
+    })
+</script>
+
 
     <script>
         // 基于准备好的dom，初始化echarts实例

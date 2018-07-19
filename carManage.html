@@ -19,7 +19,7 @@
         .containerLeft{width: 315px;height: 710px;overflow-y: auto;}
         .search{height: 30px;line-height: 30px;width: 315px;border: 1px solid #ebedf0;}
         .searchList{margin-top: 3px;}
-        .searchList li{width: 305px;height: 90px;background-color: #fdfdfd;margin-bottom: 2px;font-size: 14px;color: #666666;position: relative;}
+        .searchList li{width: 305px;height: 90px;background-color: #fdfdfd;margin-bottom: 5px;font-size: 14px;color: #666666;position: relative;}
         .searchList li:hover{border: 1px solid #cee0ff;box-shadow: 0 0 4px 2px rgba(158,193,255,0.5) ;}
         .searchList li.on{border: 1px solid #cee0ff;box-shadow: 0 0 4px 2px rgba(158,193,255,0.5) ;}
         .searchListTitle{font-size: 16px;color: #333333;}
@@ -142,5 +142,10 @@
             zoom:11
         });
     </script>
+<script>
+    $(".mapSearchBtn").click(function () {
+        window.location.href="./car_manage.html";
+    })
+</script>
 </body>
 </html>

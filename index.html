@@ -118,7 +118,7 @@
                             <span class="dan7">100000000000000</span>
                             <span class="dan8">新疆乌鲁木齐</span>
                             <span class="dan9">已到达</span>
-                            <span class="dan10">查看</span>
+                            <span class="dan10 seeDetail">查看</span>
                         </li>
                         <li class="licolor">
                                 <span class="dan1">2015-09-09 12:30</span>
@@ -130,7 +130,7 @@
                                 <span class="dan7">100000000000000</span>
                                 <span class="dan8">新疆乌鲁木齐</span>
                                 <span class="dan9">已到达</span>
-                                <span class="dan10">查看</span>
+                                <span class="dan10 seeDetail">查看</span>
                             </li>
                             <li>
                                     <span class="dan1">2015-09-09 12:30</span>
@@ -142,7 +142,7 @@
                                     <span class="dan7">100000000000000</span>
                                     <span class="dan8">新疆乌鲁木齐</span>
                                     <span class="dan9">已到达</span>
-                                    <span class="dan10">查看</span>
+                                    <span class="dan10 seeDetail">查看</span>
                                 </li>
                         
                     </ul>    
@@ -194,6 +194,10 @@
         }
     });
     laydate.skin('yahui');  //加载皮肤，参数lib为皮肤名
+
+    $(".seeDetail").click(function () {
+        window.location.href="./car_manage.html";
+    })
 </script>
     
 </body>
