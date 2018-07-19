@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Cache-Control" CONTENT="no-cache">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta name="format-detection" content="telephone=no" />
+    <title>监管平台</title>
+    <!--ab9f3018029f55bc359309286a19af59 地图key-->
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/header.css">
+    <!--<link rel="stylesheet" href="css/login.css">-->
+    <style>
+        *{box-sizing: border-box}
+        .main{background-color: #f3f3f3;width: 100%;padding-bottom: 60px;}
+        .container{width: 1200px;margin: 0 auto;box-shadow: 0 4px 10px 4px #e2e2e2 ;border: 1px solid #e2e2e2;padding: 73px 20px 60px 20px;background-color: #fafafa;}
+        .containerLeft{width: 315px;height: 710px;overflow-y: auto;}
+        .search{height: 30px;line-height: 30px;width: 315px;border: 1px solid #ebedf0;}
+        .searchList{margin-top: 3px;}
+        .searchList li{width: 305px;height: 90px;background-color: #fdfdfd;margin-bottom: 2px;font-size: 14px;color: #666666;position: relative;}
+        .searchList li:hover{border: 1px solid #cee0ff;box-shadow: 0 0 4px 2px rgba(158,193,255,0.5) ;}
+        .searchList li.on{border: 1px solid #cee0ff;box-shadow: 0 0 4px 2px rgba(158,193,255,0.5) ;}
+        .searchListTitle{font-size: 16px;color: #333333;}
+        .yundan{color: #5892f5;}
+        .btnA{color: #5892f5;}
+        .searchListNav{background-color: #fdfdfd;height: 44px;line-height: 44px;margin-top: 15px;width: 305px;}
+        .searchListNavItem{width: 50%;text-align: center;}
+        .fanyeImg{position: absolute;left: -10px;top: 5px;height: 52px;width: 73px;font-size: 30px;color: #999999;background: url("./images/cf_fanye.png") no-repeat 100% 100%;padding-left: 18px;}
+        .carCard{margin-left: 75px;margin-top: 10px;    }
+        .acrAddress{margin-top: 27px;margin-left: 15px;width: 173px;text-overflow: ellipsis;overflow: hidden;white-space: nowrap;}
+        .cardNum{font-size: 16px;color: #333333;width: 120px;display: inline-block;}
+        .time{font-size: 12px;color: #666666;}
+
+        .gaode{width: 810px;height: 740px; position: relative;}
+        .mapTop{height: 60px;background-color: rgba(255,255,255,0.95);position: absolute;left: 0;top: 0;right: 0;width: 100%;z-index: 1; }
+        .mapTitle{height: 60px;line-height: 60px;margin-left: 20px;color: #333333;font-size: 16px;}
+        .mapSearch{width: 258px;height: 34px;line-height: 34px;border-radius: 17px;overflow: hidden;border: 1px solid #e2e2e2;margin-left: 190px;margin-top: 15px;}
+        .mapSearchIpt{width: 195px;height: 34px; position: relative;}
+        .mapSearchIpt input{width: 100%;height: 100%;border: none;outline: none;text-indent: 2em;position: absolute;top: 0;left: 0;bottom: 0;right: 0;}
+        .mapSearchBtn{width: 61px;background-color: #5188ec;text-align: center;color: white;font-size: 14px;}
+
+        .mapTime{margin-left: 20px;}
+        .cirDelBl{display: inline-block; width: 0;height: 0;border: 4px solid #558ef7;border-radius: 50%;margin-right: 10px;}
+        .cirDelOr{display: inline-block; width: 0;height: 0;border: 4px solid #ff733d;border-radius: 50%;margin-right: 10px;}
+        .starTime{width: 243px;height: 25px;line-height: 25px;font-size: 14px;color: #666666;margin-top: 5px;}
+        .endTime{width: 243px;height: 25px;line-height: 25px;font-size: 14px;color: #666666;}
+    </style>
+</head>
+<body>
+<script src="./js/header.js"></script>
+    <div class="main">
+        <div class="container clearfix">
+            <div class="containerLeft" style="float: left;">
+                <div class="search" style="background-color: #fdfdfd;">
+                    <div style="float: left;height: 28px;line-height: 28px;width: 275px;border-right: 1px solid #ebedf0;overflow: hidden;background-color: #fdfdfd;">
+                        <input type="text" placeholder="请输入" style="border: none;outline: none;width: 100%;height: 100%;background-color: #fdfdfd;">
+                    </div>
+                    <img src="./images/cf_search.png" alt="" style="margin-left: 10px;">
+                </div>
+                <div class="clearfix" style="width: 315px;">
+                    <div class="searchListNav fr">
+                        <div class="searchListNavItem fl">车辆信息</div>
+                        <div class="searchListNavItem fl">报警信息</div>
+                    </div>
+                    <ul class="searchList fr">
+                        <li class="clearfix">
+                           <div class="fl">
+                               <div class="fanyeImg">冀</div>
+                               <div class="carCard"><span class="cardNum">QWE1234</span> <span class="time">12:30</span></div>
+                               <div class="acrAddress">新疆省乌鲁木齐市XX区dasdadasd</div>
+                           </div>
+                            <div class="fr" style="margin-top: 15px;margin-right: 20px;">
+                                <img src="./images/cf_jingbao.png" alt="" style="vertical-align: middle;">
+                            </div>
+                        </li>
+                        <li class="clearfix on">
+                            <div class="fl">
+                                <div class="fanyeImg">冀</div>
+                                <div class="carCard"><span class="cardNum">QWE1234</span> <span class="time">12:30</span></div>
+                                <div class="acrAddress">新疆省乌鲁木齐市XX区dasdadasd</div>
+                            </div>
+                            <div class="fr" style="margin-top: 15px;margin-right: 20px;">
+                                <img src="./images/cf_jingbao.png" alt="" style="vertical-align: middle;">
+                            </div>
+                        </li>
+                        <li class="clearfix">
+                            <div class="fl">
+                                <div class="fanyeImg">冀</div>
+                                <div class="carCard"><span class="cardNum">QWE1234</span> <span class="time">12:30</span></div>
+                                <div class="acrAddress">新疆省乌鲁木齐市XX区dasdadasd</div>
+                            </div>
+                            <div class="fr" style="margin-top: 15px;margin-right: 20px;">
+                                <img src="./images/cf_jingbao.png" alt="" style="vertical-align: middle;">
+                            </div>
+                        </li>
+                        <li class="clearfix">
+                            <div class="fl">
+                                <div class="fanyeImg">冀</div>
+                                <div class="carCard"><span class="cardNum">QWE1234</span> <span class="time">12:30</span></div>
+                                <div class="acrAddress">新疆省乌鲁木齐市XX区dasdadasd</div>
+                            </div>
+                            <div class="fr" style="margin-top: 15px;margin-right: 20px;">
+                                <img src="./images/cf_jingbao.png" alt="" style="vertical-align: middle;">
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="gaode" id="gaodeMap" style="float: right;">
+                <div class="mapTop clearfix">
+                    <div class="fl mapTitle" >报警查询</div>
+                    <div class="mapSearch fl">
+                        <div class="mapSearchIpt fl">
+                            <input type="text" placeholder="输入关键词">
+                        </div>
+                        <div class="fl mapSearchBtn" >搜索</div>
+                    </div>
+                    <div class="mapTime fl">
+                        <div class="starTime">
+                           <span class="cirDelBl"></span><span>开始时间：</span><span>2017-06-26  08:26</span>
+                        </div>
+                        <div class="endTime">
+                            <span class="cirDelOr"></span><span>开始时间：</span><span>2017-06-26  08:26</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/echarts.min.js"></script>
+    <script src="https://webapi.amap.com/maps?v=1.4.8&key=ab9f3018029f55bc359309286a19af59"></script>
+    <script type="text/javascript">
+        var map = new AMap.Map('gaodeMap', {
+            center:[117.000923,36.675807],
+            zoom:11
+        });
+    </script>
+</body>
+</html>

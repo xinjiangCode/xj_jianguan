@@ -23,9 +23,9 @@
         .monitorList li:hover{background-color: #5892f5;color: white;box-shadow: 4px 4px 10px 4px #e2e2e2;}
         .monitorList li.on{background-color: #5892f5;color: white;box-shadow: 4px 4px 10px 4px #e2e2e2;}
         .listBox td{ text-align: center; margin: 0;padding: 0; }
-        .listBox thead{background-color: #fafafa;border: 1px solid #ebedf0;font-size: 16px;color: #333333;}
-        .listBox tbody{color: #666666;font-size: 14px;}
-        .listBox  td,.listBox  th{height: 40px;line-height: 40px;}
+        .listBox thead{background-color: #fafafa;border: 1px solid #ebedf0;font-size: 12px;color: #282828;}
+        .listBox tbody{color: #666666;font-size: 12px;}
+        .listBox  td,.listBox  th{height: 57px;}
          table{width: 100%; border-spacing:0;}
         .containerLeft{width: 420px;height: 710px;overflow-y: auto;}
         .search{height: 30px;line-height: 30px;width: 420px;border: 1px solid #ebedf0;}
@@ -35,10 +35,7 @@
         .searchList li.on{border: 1px solid #91b4f2;box-shadow: 0 0 10px 1px #91b4f2 ;}
         .searchListTitle{font-size: 16px;color: #333333;}
         .yundan{color: #5892f5;}
-        .qiyeInfo,.qiyeData,.orderData,.baoJingData{width: 688px;height: 145px;border: 1px solid #ebedf0;padding:15px 12px;;margin: 0 auto;margin-bottom: 10px}
-        .qiyeInfoTitle,.qiyeDataTitle,.orderDataTitle,.baoJingDataTitle{border-left: 4px solid #558ff8;padding-left: 5px;font-size: 16px;color: #333333;margin-bottom: 9px; }
-        .qiyeInfoText,.qiyeDataText,.orderDataText,.baoJingDataText{line-height: 28px;font-size: 14px;color: #666666;margin-left: 9px;}
-        .qiyeData{height: 90px;}
+    .btnA{color: #5892f5;}
     </style>
 </head>
 <body>
@@ -99,60 +96,74 @@
             </div>
             <div class="monitor" style="float: right;">
                 <ul class="monitorList clearfix">
-                    <li class="on">全部</li>
-                    <li>车辆</li>
+                    <li>全部</li>
+                    <li class="on">车辆</li>
                     <li>物流订单</li>
                     <li>交易订单</li>
                 </ul>
-                <div class="qiyeInfo">
-                    <div class="qiyeInfoTitle">企业信息</div>
-                    <div class="qiyeInfoText">
-                        <span>企业名称：</span><span style="width: 170px;display: inline-block;">新疆XXXX化工集团</span>
-                        <span>注册资金：</span><span>100万</span>
-                    </div>
-                    <div class="qiyeInfoText">
-                        <span>公司地址：</span><span></span>
-                    </div>
-                    <div class="qiyeInfoText">
-                        <span>身份类型：</span><span></span>
-                    </div>
-                </div>
-
-                <div class="qiyeData">
-                    <div class="qiyeDataTitle">企业数据</div>
-                    <div class="qiyeDataText">
-                        <span>员工数量：</span><span style="width: 170px;display: inline-block;">50</span>
-                        <span>车辆数量：</span><span>200</span>
-                    </div>
-                </div>
-
-                <div class="orderData">
-                    <div class="orderDataTitle">订单数据</div>
-                    <div class="orderDataText">
-                        <span>订单总量：</span><span style="width: 170px;display: inline-block;">1000000</span>
-                        <span>进行中的订单：</span><span style="width: 170px;display: inline-block;">10000</span>
-                        <span>已完成运输：</span><span>100吨</span>
-                    </div>
-                    <div class="orderDataText">
-                        <span>订单总量：</span><span style="width: 170px;display: inline-block;">50000吨</span>
-                        <span>进行中的订单：</span><span style="width: 170px;display: inline-block;">1000</span>
-                    </div>
-                    <div class="orderDataText">
-                        <span>在途运输：</span><span style="width: 170px;display: inline-block;">1000吨</span>
-                    </div>
-                </div>
-
-                <div class="baoJingData">
-                    <div class="baoJingDataTitle">报警数据</div>
-                    <div class="baoJingDataText">
-                        <span>总&nbsp;&nbsp;违&nbsp;&nbsp;章：</span><span style="width: 170px;display: inline-block;">100</span>
-                        <span>近七天违章：</span><span style="width: 170px;display: inline-block;">10</span>
-                    </div>
-                    <div class="baoJingDataText">
-                        <span>今日违章：</span><span style="width: 170px;display: inline-block;">1</span>
-                    </div>
-                    <div class="baoJingDataText">
-
+                <div class="listBox">
+                    <div class="listBox clearfix">
+                        <table>
+                            <thead>
+                            <tr>
+                                <th>车牌号</th>
+                                <th>车辆分类</th>
+                                <th>车辆品牌</th>
+                                <th>车辆类型</th>
+                                <th>车辆档案号</th>
+                                <th style="width: 90px;">年审时间</th>
+                                <th>操作</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>新B EWR123</td>
+                                <td>内部车辆</td>
+                                <td>XXX牌</td>
+                                <td>乙醚-罐车0</td>
+                                <td>车辆档案号</td>
+                                <td>2015-09-09 12：30</td>
+                                <td class="btnA">车辆详情</td>
+                            </tr>
+                            <tr>
+                                <td>新B EWR123</td>
+                                <td>内部车辆</td>
+                                <td>XXX牌</td>
+                                <td>乙醚-罐车0</td>
+                                <td>车辆档案号</td>
+                                <td>2015-09-09 12：30</td>
+                                <td class="btnA">车辆详情</td>
+                            </tr>
+                            <tr>
+                                <td>新B EWR123</td>
+                                <td>内部车辆</td>
+                                <td>XXX牌</td>
+                                <td>乙醚-罐车0</td>
+                                <td>车辆档案号</td>
+                                <td>2015-09-09 12：30</td>
+                                <td class="btnA">车辆详情</td>
+                            </tr>
+                            <tr>
+                                <td>新B EWR123</td>
+                                <td>内部车辆</td>
+                                <td>XXX牌</td>
+                                <td>乙醚-罐车0</td>
+                                <td>车辆档案号</td>
+                                <td>2015-09-09 12：30</td>
+                                <td class="btnA">车辆详情</td>
+                            </tr>
+                            <tr>
+                                <td>新B EWR123</td>
+                                <td>内部车辆</td>
+                                <td>XXX牌</td>
+                                <td>乙醚-罐车0</td>
+                                <td>车辆档案号</td>
+                                <td>2015-09-09 12：30</td>
+                                <td class="btnA">车辆详情</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                        <!--<div class="cf_btnA" style="float: right;margin: 10px 22px 12px 0;">查看更多＞</div>-->
                     </div>
                 </div>
             </div>
