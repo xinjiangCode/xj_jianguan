@@ -62,7 +62,7 @@
 	margin-top: 28px;
 }
 
-.order_list {
+.order_list{
 	height: 54px;
 	border: 1px solid #f1f2f4;
 	border-top: 2px solid #f1f2f4;
@@ -74,6 +74,23 @@
 	width: 1163px;
 	margin-left: 19px;
 	box-sizing: border-box;
+	float: left;
+}
+
+.order_list .daoru {
+	display: inline-block;
+	width: 91px;
+	height: 30px;
+	background: #5892f5;
+	text-align: center;
+	font-size: 12px;
+	color: #fff;
+	margin-right: 11px;
+	line-height: 30px;
+	border-radius: 2px;
+	cursor: pointer;
+	float: right;
+	margin-top: 10px;
 }
 
 
