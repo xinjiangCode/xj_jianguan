@@ -12,11 +12,13 @@ document.writeln('</div>');
 document.writeln('</div>');
 
 document.writeln('<ul class="title_ul clearfix">');
+
 document.writeln('<li style="width: 239px;"><a href="index.html"><img src="./images/title1.png" alt="" />首页</a></li>');
 document.writeln('<li><a href="qiyeManage.html"><img src="./images/title2.png" alt="" />企业管理</a></li>');
 document.writeln('<li><a href="carManage.html"><img src="./images/title3.png" alt="" />车辆管理</a></li>');
 document.writeln('<li><a href="jianguanTongji.html"><img src="./images/title4.png" alt="" />监管统计</a></li>');
 document.writeln('<li><a href="analze.html"><img src="./images/title5.png" alt="" />监管分析</a></li>');
+
 document.writeln('</ul>');
 
 document.writeln('</div>');

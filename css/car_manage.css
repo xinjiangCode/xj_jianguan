@@ -1,0 +1,145 @@
+.main_main {
+	width: 1200px;
+	margin: 0 auto;
+	background: #f9f9f9;
+	height: 1200px;
+}
+
+.map {
+	padding-top: 40px;
+	margin-left: 20px;
+	width: 1160px;
+	height: 355px;
+}
+
+.map_info {
+	background: url('../images/map_info_bg.png') no-repeat;
+	width: 1176px;
+	height: 161px;
+	margin-left: 12px;
+	padding-left: 65px;
+	box-sizing: border-box;
+	padding-top: 20px;
+}
+
+.map_info {
+	line-height: 28px;
+	font-size: 14px;
+	color: #333;
+}
+
+.map_info li {
+	float: left;
+	width: 33%;
+}
+
+.jiaoyi_wuliu_order ul li {
+	float: left;
+	color: #666666;
+	font-size: 16px;
+}
+
+.jiaoyi_wuliu_order {
+	width: 1160px;
+
+}
+
+.jiaoyi_wuliu_order ul li span {
+	display: inline-block;
+	width: 102px;
+	height: 41px;
+	text-align: center;
+	line-height: 41px;
+	color: #666666;
+	font-size: 16px;
+}
+
+.jiaoyi_wuliu_order ul li.current {
+	background: url('../images/car_tab.png') no-repeat;
+	width: 108px;
+	height: 41px;
+}
+
+.jiaoyi_wuliu_order ul li.current span {
+	display: inline-block;
+	width: 102px;
+	height: 41px;
+	text-align: center;
+	line-height: 41px;
+	color: #5892f5;
+	font-size: 16px;
+}
+
+.order_info_bg {
+	background: #fff;
+	border: 1px solid #e7e9ed;
+}
+
+.order_info {
+	margin-top: 20px;
+	margin-left: 22px;
+	width: 1115px;
+	border: 1px solid #ebe9ea;
+}
+
+.order_info1 {
+	height: 345px;
+}
+
+.order_info2 {
+	height: 202px;
+}
+
+.order_info3 {
+	height: 108px;
+}
+
+.order_top {
+	background: url('../images/order_bg.png') no-repeat;
+	height: 50px;
+	width: 914px;
+	line-height: 50px;
+	color: #282828;
+	font-size: 16px;
+}
+
+.order_top span {
+	margin-left: 10px;
+}
+
+.order_top img {
+	vertical-align: middle;
+	margin-left: 15px;
+}
+
+.info {
+	padding-top: 10px;
+	box-sizing: border-box;
+	padding-left: 40px;
+}
+
+.info li {
+	float: left;
+}
+
+.li_50 li:first-child {
+	width: 33%;
+}
+
+.li_30 li {
+	width: 33%;
+}
+ 
+.info li div {
+	font-size: 14px;
+	color: #333333;
+	line-height: 32px;
+}
+
+.info li div a {
+	color: #82b0ff;
+}
+
+.ul_li {
+	margin-bottom: -1px;
+}
