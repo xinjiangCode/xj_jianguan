@@ -12,11 +12,11 @@ document.writeln('</div>');
 document.writeln('</div>');
 
 document.writeln('<ul class="title_ul clearfix">');
-document.writeln('<li style="width: 239px;"><a href="##"><img src="../images/title1.png" alt="" />首页</a></li>');
-document.writeln('<li><a href="##"><img src="./images/title2.png" alt="" />企业管理</a></li>');
-document.writeln('<li><a href="##"><img src="./images/title3.png" alt="" />车辆管理</a></li>');
-document.writeln('<li><a href="##"><img src="./images/title4.png" alt="" />监管统计</a></li>');
-document.writeln('<li class="tilte_current"><a href="##"><img src="../images/title55.png" alt="" />监管分析</a></li>');
+document.writeln('<li style="width: 239px;"><a href="index.html"><img src="./images/title1.png" alt="" />首页</a></li>');
+document.writeln('<li><a href="qiyeManage.html"><img src="./images/title2.png" alt="" />企业管理</a></li>');
+document.writeln('<li><a href="carManage.html"><img src="./images/title3.png" alt="" />车辆管理</a></li>');
+document.writeln('<li><a href="jianguanTongji.html"><img src="./images/title4.png" alt="" />监管统计</a></li>');
+document.writeln('<li><a href="analze.html"><img src="./images/title5.png" alt="" />监管分析</a></li>');
 document.writeln('</ul>');
 
 document.writeln('</div>');
@@ -24,12 +24,15 @@ document.writeln('</div>');
 
 
 $(document).on('click', '.title_ul li', function() {
-	var index = $(this).index() + 1;
-	$('.title_ul li').removeClass('tilte_current');
-	// $('.title_ul li').find('img').attr('src', '../images/title'+index+'.png');
-	$(this).addClass('tilte_current');
-	
-	$(this).find('img').attr('src', './images/title'+index+index+'.png');
+
+	var index = $(this).index() ;
+    sessionStorage.setItem("topTitleIndex",index);
+	// debugger
+	// $('.title_ul li').removeClass('tilte_current');
+	// // $('.title_ul li').find('img').attr('src', '../images/title'+index+'.png');
+	// $(this).addClass('tilte_current');
+	//
+	// $(this).find('img').attr('src', './images/title'+index+index+'.png');
 
 	
 });

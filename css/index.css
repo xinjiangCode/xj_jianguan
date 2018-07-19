@@ -1,0 +1,379 @@
+.page{
+    width:1200px;
+    height:1210px;
+    background: #f9f9f9;
+    margin:0 auto;
+}
+.center{
+    width:1160px;
+    height:1075px;
+    margin-left:20px;
+}
+.transport{
+    width:100%;
+    height:150px;
+}
+.transport ul{
+    width:100%;
+    height:100%;
+}
+.transport ul li{
+    width:275px;
+    height:100%;
+    background: #FFF;
+   float: left;
+   border-radius: 5px;
+   margin-right:20px;
+}
+.transport ul li p{
+    font-size:25px;
+    font-weight: bold;
+    margin-left:20px;
+    margin-top:30px;
+}
+.transport ul .li4{
+    margin-right:-20px;
+}
+.transport ul li span{
+    font-size:15px;
+    color:#666666;
+    margin-left:20px;
+    margin-top:20px;
+}
+.transport ul .li1 h1,.transport ul .li2 h1,.transport ul .li3 h1,.transport ul .li4 h1{
+    width:63px;
+    height:63px;
+    border-radius: 50%;
+}
+.transport ul li h1{
+    position: relative;
+    top:-55px;
+    left:185px;
+}
+.transport ul li h1 img{
+    position: relative;
+    top:18px;
+    left:17px;
+}
+.transport ul .li1 .cach1{
+    background: #5a77d6;
+}
+.transport ul .li2 .cach2{
+    background: #3ab5ea;
+}
+.transport ul .li3 .cach3{
+    background: #5a77d6;
+}
+.transport ul .li4 .cach4{
+    background: #3ab5ea;
+}
+.transport ul li h2{
+    width:100%;
+    height:35px;
+    border-radius: 5px;
+    position: relative;
+    top:-32px;
+}
+.transport ul .li1 h2{
+    background: #5a77d6;
+}
+.transport ul .li2 h2{
+    background: #3ab5ea;
+}
+.transport ul .li3 h2{
+    background: #5a77d6;
+}
+.transport ul .li4 h2{
+    background: #3ab5ea;
+} 
+.transport ul li h2 em{
+    font-style: normal;
+    font-size:13px;
+    color:#FFF;
+    line-height:35px;
+    margin-left:20px;
+} 
+.transport ul li h2 em i{
+    margin-left:10px;
+}
+.transport ul li h2 .tong{
+    margin-left:106px;
+}
+.order{
+    width:100%;
+    height:390px;
+    margin-top:40px;
+    border:1px solid #e7e9ed;
+}
+.order .left{
+    width:757px;
+    height:390px;
+    background: #FFF;
+    float: left;
+}
+.order .left .timu{
+    width:100%;
+    height:53px;
+    border-bottom:2px solid #e7e9ed;
+}
+.order .left .timu p{
+    width:300px;
+    font-size:18px;
+    color:#666666;
+    margin-left:25px;
+    line-height:53px;
+    float: left;
+}
+.order .left .timu ul{
+    width:280px;
+    height:53px;
+    float:right;
+    cursor: pointer;
+    display:flex;
+}
+.order .left .timu ul li{
+    padding-right:25px;
+    line-height:53px;
+    text-align: center;
+}
+.order .left .timu .ding .finesh{
+    border-bottom:2px solid #3aa9eb;
+    color:#3aa9eb;
+}
+.order .left .xian{
+    width:757px;
+    height:337px;
+}
+.order .left .date{
+    width:380px;
+    height:35px;
+    position: relative;
+    top:-326px;
+    left:365px;
+}
+.order .left .date .demo-input{
+    width:172px;
+    height:35px;
+    border:1px solid #d6d6d6;
+    text-indent: 10px;
+}
+.order .left .date i{
+    color:#d6d6d6;
+    margin-left:8px;
+}
+
+
+.order .right{
+    width:390px;
+    height:390px;
+    background: #FFF;
+    float: right;
+}
+.order .right p{
+    font-size:18px;
+    color:#666666;
+    padding-left:25px;
+    line-height:53px;
+    border-bottom:2px solid #e7e9ed;
+}
+.order .right .list1{
+    width:100%;
+    height:40px;
+    background: #f3f3f3;
+}
+.order .right .list1 .danger{
+    width:100%;
+    height:40px;
+}
+.order .right .list1 .danger li{
+    width:95px;
+    height:100%;
+    float: left;
+    text-align: center;
+    line-height: 40px;
+    font-size:13px;
+}
+.order .right .json1{
+    width:100%;
+    height:295px;
+}
+.order .right .json1 ul{
+    width:100%;
+    height:30px;
+}
+.order .right .json1 ul li{
+    width:95px;
+    height:30px;
+    float: left;
+    text-align: center;
+    line-height:30px;
+    font-size:13px;
+}
+.order .right .json1 ul .colorr{
+    color:#3ab5ea;
+}
+.order .right .json1 ul .colorrr{
+    color:#24d8cb;
+}
+.list{
+    width:100%;
+    height:57px;
+    background: #FFF;
+    margin-top:30px;
+}
+.list span{
+    font-size:18px;
+    line-height:57px;
+    color:#666666;
+    margin-left:25px;
+    line-height:53px;
+    float: left;
+}
+.list p{
+    width:875px;
+    height:57px;
+    margin-left:285px;
+}
+.list p .demo-input{
+    width:172px;
+    height:35px;
+    border:1px solid #d6d6d6;
+    margin-top:10px;
+    text-indent: 10px;
+}
+.list p i{
+    color:#d6d6d6;
+    margin-left:8px;
+}
+.list p .serch{
+    width:238px;
+    height:35px;
+    border:1px solid #d6d6d6;
+    margin-top:10px;
+    text-indent: 10px;
+    margin-left:7px;
+}
+.list p button{
+    width:110px;
+    height:35px;
+    color:#FFF;
+    line-height: 35px;
+    font-size:15px;
+    text-align: center;
+    background: #5892f5;
+    outline: none;
+    cursor: pointer;
+    margin-left:7px;
+}
+.dingdan{
+    width:100%;
+    height:407px;
+}
+.dingdan .title{
+    width:100%;
+    height:40px;
+}
+.dingdan .title ul{
+    width:100%;
+    height:40px;
+}
+.dingdan .title ul .menu{
+    width:100%;
+    height:40px;
+    background:#f3f3f3;
+    color:#111;
+    font-size:13px;
+}
+.dingdan .title ul li span{
+    float: left;
+    height:40px;
+    line-height:40px;
+    text-align: center;
+    display:block;
+}
+.dingdan .title ul li .dan1{
+    width:175px;   
+}
+.dingdan .title ul li .dan2{
+    width:60px;   
+}
+.dingdan .title ul li .dan3{
+    width:55px;   
+}
+.dingdan .title ul li .dan4{
+    width:140px;    
+}
+.dingdan .title ul li .dan5{
+    width:140px;
+}
+.dingdan .title ul li .dan6{
+    width:140px;   
+}
+.dingdan .title ul li .dan7{
+    width:146px;  
+}
+.dingdan .title ul li .dan8{
+    width:120px;  
+}
+.dingdan .title ul li .dan9{
+    width:72px;  
+}
+.dingdan .title ul li .dan10{
+    width:72px;  
+}
+.dingdan .titleli{
+    width:100%;
+    height:376px;
+    background: #FFF;
+}
+.dingdan .titleli ul{
+    width:100%;
+    height:100%;
+}
+.dingdan .titleli ul li{
+    width:100%;
+    height:75px;
+    color:#808080;
+    font-size:12px;
+}
+.dingdan .titleli ul .licolor{
+    background: #f2f8ff;
+}    
+.dingdan .titleli ul li span{
+    float: left;
+    height:75px;
+    line-height:75px;
+    text-align: center;
+    display:block;
+}
+.dingdan .titleli ul li .dan1{
+    width:175px;   
+}
+.dingdan .titleli ul li .dan2{
+    width:60px;   
+}
+.dingdan .titleli ul li .dan3{
+    width:55px;   
+}
+.dingdan .titleli ul li .dan4{
+    width:140px;    
+}
+.dingdan .titleli ul li .dan5{
+    width:140px;
+}
+.dingdan .titleli ul li .dan6{
+    width:140px;   
+}
+.dingdan .titleli ul li .dan7{
+    width:146px;  
+}
+.dingdan .titleli ul li .dan8{
+    width:120px;  
+}
+.dingdan .titleli ul li .dan9{
+    width:72px;  
+}
+.dingdan .titleli ul li .dan10{
+    width:72px;  
+    color:#5892f5;
+}
