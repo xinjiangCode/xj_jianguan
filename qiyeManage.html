@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Cache-Control" CONTENT="no-cache">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta name="format-detection" content="telephone=no" />
+    <title>监管平台</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <!--<link rel="stylesheet" href="css/login.css">-->
+    <style>
+        *{box-sizing: border-box}
+        .pubTitle{height: 208px;width: 100%;min-width: 1200px;background: url("./images/cf_pubTitleBack.png") center center/100% 100%;}
+        .clearFloat::after,.clearFloat::before{content: "";clear: both;display: block;}
+        .main{background-color: #f3f3f3;width: 100%;padding-bottom: 60px;}
+        .container{width: 1200px;margin: 0 auto;box-shadow: 0 4px 10px 4px #e2e2e2 ;border: 1px solid #e2e2e2;padding: 73px 20px 60px 20px;background-color: #fafafa;}
+        .monitor{width: 724px;height: 713px;background-color: #fdfdfd;}
+        .monitorList li{width: 181px;height: 40px;line-height: 40px;text-align: center;color: #666666;font-size: 16px;float: left;}
+        .monitorList li:hover{background-color: #5892f5;color: white;}
+        .monitorList li.on{background-color: #5892f5;color: white;}
+        .listBox td{ text-align: center; margin: 0;padding: 0; }
+        .listBox thead{background-color: #fafafa;border: 1px solid #ebedf0;font-size: 16px;color: #333333;}
+        .listBox tbody{color: #666666;font-size: 14px;}
+        .listBox  td,.listBox  th{height: 40px;line-height: 40px;}
+         table{width: 100%; border-spacing:0;}
+        .containerLeft{width: 420px;height: 710px;overflow-y: auto;}
+        .search{height: 30px;line-height: 30px;width: 420px;border: 1px solid #ebedf0;}
+        .searchList{margin-top: 15px;}
+        .searchList li{width: 420px;height: 100px;padding:18px 22px;background-color: #fdfdfd;margin-bottom: 2px;font-size: 14px;color: #666666;}
+        .searchList li:hover{border: 1px solid #91b4f2;box-shadow: 0 0 10px 1px #91b4f2 ;}
+        .searchList li.on{border: 1px solid #91b4f2;box-shadow: 0 0 10px 1px #91b4f2 ;}
+        .searchListTitle{font-size: 16px;color: #333333;}
+        .yundan{color: #5892f5;}
+    </style>
+</head>
+<body>
+    <div class="main">
+        <div class="pubTitle ">
+            <div>
+                <div class="logo">
+                    <img src="./images/cf_logo.png" alt="">
+                </div>
+            </div>
+            <div>
+
+            </div>
+        </div>
+        <div class="container clearfix">
+            <div class="containerLeft" style="float: left;">
+                <div class="search" style="background-color: #fdfdfd;">
+                    <div style="float: left;height: 28px;line-height: 28px;width: 390px;border-right: 1px solid #ebedf0;overflow: hidden;background-color: #fdfdfd;">
+                        <input type="text" placeholder="请输入" style="border: none;outline: none;width: 100%;height: 100%;background-color: #fdfdfd;">
+                    </div>
+                    <img src="./images/cf_search.png" alt="" style="margin-left: 5px;">
+                </div>
+                <div>
+                    <ul class="searchList">
+                        <li class="clearfix">
+                            <div class="clearfix">
+                                <div class="searchListTitle fl">企业名称</div>
+                                <div class="fr"><span>车辆： </span><span>20</span> <span>人员：</span> <span>20</span></div>
+                            </div>
+                             <div class="clearfix" style="margin-top: 25px;">
+                                 <div class="searchAddress fl">新疆省乌鲁木齐市XXXX区XXXX</div>
+                                 <div class="yundan fr"><span>运单：</span><span>20000</span></div>
+                             </div>
+                        </li>
+                        <li class="clearfix">
+                            <div class="clearfix">
+                                <div class="searchListTitle fl">企业名称</div>
+                                <div class="fr"><span>车辆： </span><span>20</span> <span>人员：</span> <span>20</span></div>
+                            </div>
+                            <div class="clearfix" style="margin-top: 25px;">
+                                <div class="searchAddress fl">新疆省乌鲁木齐市XXXX区XXXX</div>
+                                <div class="yundan fr"><span>运单：</span><span>20000</span></div>
+                            </div>
+                        </li>
+                        <li class="clearfix on">
+                            <div class="clearfix">
+                                <div class="searchListTitle fl">企业名称</div>
+                                <div class="fr"><span>车辆： </span><span>20</span> <span>人员：</span> <span>20</span></div>
+                            </div>
+                            <div class="clearfix" style="margin-top: 25px;">
+                                <div class="searchAddress fl">新疆省乌鲁木齐市XXXX区XXXX</div>
+                                <div class="yundan fr"><span>运单：</span><span>20000</span></div>
+                            </div>
+                        </li>
+                        <li class="clearfix">
+                            <div class="clearfix">
+                                <div class="searchListTitle fl">企业名称</div>
+                                <div class="fr"><span>车辆： </span><span>20</span> <span>人员：</span> <span>20</span></div>
+                            </div>
+                            <div class="clearfix" style="margin-top: 25px;">
+                                <div class="searchAddress fl">新疆省乌鲁木齐市XXXX区XXXX</div>
+                                <div class="yundan fr"><span>运单：</span><span>20000</span></div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="monitor" style="float: right;">
+                <ul class="monitorList clearfix">
+                    <li class="on">全部</li>
+                    <li>车辆</li>
+                    <li>物流订单</li>
+                    <li>交易订单</li>
+                </ul>
+                <div class="qiyeInfo">
+                    <div>企业信息</div>
+                    <div><span>企业名称：</span><span style="width: 190px;display: inline-block;">新疆XXXX化工集团</span><span>注册资金：</span><span>100万</span></div>
+                    <div><span>公司地址：</span><span></span></div>
+                    <div><span>身份类型：</span><span></span></div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/echarts.min.js"></script>
+
+    <script>
+        // 基于准备好的dom，初始化echarts实例
+        var myChart = echarts.init(document.getElementById('baojing'));
+        //环形图  预警
+        var option =  {
+            legend: {
+//                orient: 'vertical',
+//                x: 'center',
+//                y:'bottom',
+                left:'25',
+                bottom:'30',
+                data:['政治风险','廉政风险','渎职风险','绩效风险'],
+            },
+            title:{
+                text: '294',
+                subtext: '总报警统计',
+                size:'200',
+                x: 'center',
+                y:'center',
+                top:'100',
+                textStyle:{
+                    fontSize:36,
+                    color:'#333'
+                },
+                subtextStyle:{
+                    fontSize:14
+                }
+            },
+            series: [
+                {
+                    center: ['50%', '40%'],
+                    name:'访问来源',
+                    type:'pie',
+                    radius: ['40%', '60%'],
+                    data:[
+                        {value:25, name:'政治风险'},
+                        {value:25, name:'廉政风险'},
+                        {value:25, name:'渎职风险'},
+                        {value:25, name:'绩效风险'}
+                    ]
+                }
+            ]
+        };
+        myChart.setOption(option);
+
+        // 基于准备好的dom，初始化echarts实例
+        var myChart1 = echarts.init(document.getElementById('car'));
+        //环形图   车辆
+        var option1 =  {
+            legend: {
+                orient: 'vertical',
+                x: 'left',
+                data:['在线行驶车辆','在线停车车辆'],
+                left:'25',
+                top:'10'
+            },
+            title:{
+                text: '2941',
+                subtext: '在线车辆总数',
+                size:'200',
+                x: 'center',
+                y:'center',
+                top:'140',
+                textStyle:{
+                    fontSize:36,
+                    color:'#333'
+                },
+                subtextStyle:{
+                    fontSize:14
+                }
+            },
+            series: [
+                {
+                    name:'访问来源',
+                    type:'pie',
+                    radius: ['40%', '60%'],
+                    data:[
+                        {value:25, name:'在线行驶车辆'},
+                        {value:25, name:'在线停车车辆'},
+                    ]
+                }
+            ]
+        };
+        myChart1.setOption(option1);
+    </script>
+</body>
+</html>
