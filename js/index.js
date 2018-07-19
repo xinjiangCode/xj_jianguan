@@ -103,26 +103,26 @@
 
 
 //json1危化品
-//         $(function(){
-//             $.ajax({
-//                 type:"get",//请求类型 get或者post
-//                 url:"../data/danger.json",//请求地址
-//                 async:true,//异步或者同步，默认是异步
-//                         //timeout超时时间（毫秒）
-//                 cache:false,//默认: true , 为false不读取缓存
-//                 dataType:"json",
-//                 success:function(data){
-//                     console.log(data);
-//                     for (var i = 0; i < data.danger.length; i++) {
-//                         $(".right .json1").append("<ul><li>"+data.danger[i].proder+"</li><li>"+data.danger[i].num+"</li><li class='colorr'>"+data.danger[i].lider+"</li><li class='colorrr'>"+data.danger[i].week+"</li></ul>");
-//                     };
-//
-//                 },//请求成功的回调函数，请求回的数据是这个函数的第一个参数
-//                 error:function(){
-//                     alert("请求失败");
-//                 },//请求失败的回调函数
-//
-//             })
-//         })
-//
+        $(function(){
+            $.ajax({
+                type:"get",//请求类型 get或者post
+                url:"data/danger.json",//请求地址
+                async:true,//异步或者同步，默认是异步
+                        //timeout超时时间（毫秒）
+                cache:false,//默认: true , 为false不读取缓存
+                dataType:"json",
+                success:function(data){
+                    console.log(data);
+                    for (var i = 0; i < data.danger.length; i++) {
+                        $(".right .json1").append("<ul><li>"+data.danger[i].proder+"</li><li>"+data.danger[i].num+"</li><li class='colorr'>"+data.danger[i].lider+"</li><li class='colorrr'>"+data.danger[i].week+"</li></ul>");
+                    };
+
+                },//请求成功的回调函数，请求回的数据是这个函数的第一个参数
+                error:function(){
+                    alert("请求失败");
+                },//请求失败的回调函数
+
+            })
+        })
+
         

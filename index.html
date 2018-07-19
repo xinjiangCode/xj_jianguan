@@ -7,7 +7,8 @@
     <title>Document</title>
     <link href="css/reset.css" rel="stylesheet">
     <link href="css/header.css" rel="stylesheet">
-    <link href="css/index.css" rel="stylesheet">    
+    <link href="css/index.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/page.css">
     <script src="js/jquery-3.2.1.min.js"></script>
     <script src="js/echarts.min.js"></script>   
 </head>
@@ -81,8 +82,8 @@
             <div class="list">
                 <span>订单列表</span>
                 <p>
-                    <input type="text" class="demo-input" placeholder="请选择时间"><i>—</i>
-                    <input type="text" class="demo-input" placeholder="请选择时间">
+                    <input type="text" class="demo-input" placeholder="请选择时间" id="test1"><i>—</i>
+                    <input type="text" class="demo-input" placeholder="请选择时间" id="test2">
                     <input type="text" class="serch" placeholder="企业名称、危化品名称">
                     <button>搜索</button>
                     <button>导入</button>
@@ -147,13 +148,52 @@
                     </ul>    
                 </div>
                 
-            </div>                 
+            </div>
+            <div class="" style="text-align: center;height: 75px;padding-top: 17px;margin-bottom: 0;">
+                <ul class="pagination" id="page1" style="position: static;margin-bottom: 0;"></ul>
+                <div class="pageJump">
+                    <span class="allPageN">1/200</span>
+                    <i style="margin-left: 12px;">共200页</i>，
+                    <span>到第</span>
+                    <input type="text"/>
+                    <span>页</span>
+                    <button type="button" class="button">GO</button>
+                </div>
+            </div>
         </div>
     </div>
     <script src="js/index.js"></script>
+<script src="./js/pager.js" type="text/javascript" charset="utf-8"></script>
 <script src="js/common.js"></script>
+<script src="./laydate/laydate.js"></script> <!-- 改成你的路径 -->
 <script>
+    $('.objListBox>div:nth-child(5n)').css('margin-right','0');
+    Page({
+        num: 200,
+        elem: $('#page1'),
+        callback: function(n) {
+            console.log(n);
+        }
+    });
     sessionStorage.setItem("topTitleIndex",0);
+
+    laydate({
+        elem: '#test1',
+        format: 'YYYY-MM-DD',
+        istime: false,
+        choose: function(dates){ //选择好日期的回调
+            startTime = dates;
+        }
+    });
+    laydate({
+        elem: '#test2',
+        format: 'YYYY-MM-DD',
+        istime: false,
+        choose: function(dates){ //选择好日期的回调
+            endTime = dates;
+        }
+    });
+    laydate.skin('yahui');  //加载皮肤，参数lib为皮肤名
 </script>
     
 </body>
