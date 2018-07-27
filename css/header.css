@@ -61,7 +61,7 @@ span.shu_line {
 	float: left;
 	width: 240px;
 	line-height: 86px;
-	border-right: 1px solid #f9f9f9; 
+	border-right: 1px solid #f7f7f7;
 	cursor: pointer;
 }
 
@@ -79,7 +79,8 @@ span.shu_line {
 }
 
 .title_ul li.tilte_current a {
-	background: #f9f9f9;
+	height: 88px;
+	background: #f7f7f7;
 	color: #5892f5;
 }
 *{box-sizing: border-box}

@@ -1,26 +1,33 @@
+body{background-color: #f3f3f3}
 .main_main {
 	width: 1200px;
 	margin: 0 auto;
-	background: #f9f9f9;
+	background: #f7f7f7;
 	height: 1200px;
+	/*box-shadow: 0 4px 10px 4px #e2e2e2;*/
+	/*border: 1px solid #e2e2e2;*/
 }
 
 .cont {
-	padding-top: 32px;
+	padding-top: 20px;
 }
 
 .cont ul.ul  {
-	padding-left: 16px;
+	padding-left: 19px;
 }
 
 .cont .ul li {
-	width: 275px;
+	width: 276px;
 	height: 143px;
 	background: #fff;
 	border-radius: 3px;
 	float: left;
-	margin-left: 14px;
+	margin-left: 19px;
 	margin-bottom: 32px;
+}
+
+.cont .ul li:first-child {
+	margin-left: 0px;
 }
 
 .cont .ul li .total_num {
@@ -279,7 +286,7 @@ td {
 }
 
 .order_xuhao {
-	color: #5a77d6;
+	/*color: #5a77d6;*/
 }
 
 .dihzi {

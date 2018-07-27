@@ -1,8 +1,11 @@
+body{background-color: #f3f3f3}
 .page{
     width:1200px;
     height:1210px;
-    background: #f9f9f9;
+    background: #f7f7f7;
     margin:0 auto;
+    /*box-shadow: 0 4px 10px 4px #e2e2e2;*/
+    /*border: 1px solid #e2e2e2;*/
 }
 .center{
     width:1160px;
@@ -51,21 +54,21 @@
     left:185px;
 }
 .transport ul li h1 img{
-    position: relative;
-    top:18px;
-    left:17px;
+    /*position: relative;*/
+    /*top:18px;*/
+    /*left:17px;*/
 }
 .transport ul .li1 .cach1{
-    background: #5a77d6;
+    /*background: #5a77d6;*/
 }
 .transport ul .li2 .cach2{
-    background: #3ab5ea;
+    /*background: #3ab5ea;*/
 }
 .transport ul .li3 .cach3{
-    background: #5a77d6;
+    /*background: #5a77d6;*/
 }
 .transport ul .li4 .cach4{
-    background: #3ab5ea;
+    /*background: #3ab5ea;*/
 }
 .transport ul li h2{
     width:100%;
@@ -118,7 +121,7 @@
 }
 .order .left .timu p{
     width:300px;
-    font-size:18px;
+    font-size:16px;
     color:#666666;
     margin-left:25px;
     line-height:53px;
@@ -132,7 +135,7 @@
     display:flex;
 }
 .order .left .timu ul li{
-    padding-right:25px;
+    padding:0 12.5px;
     line-height:53px;
     text-align: center;
 }

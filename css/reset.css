@@ -51,16 +51,16 @@ input,select{
 }
 
 input::-webkit-input-placeholder, textarea::-webkit-input-placeholder { 
-color: #cccccc; 
+color: #999999;
 } 
 input:-moz-placeholder, textarea:-moz-placeholder { 
-color: #cccccc; 
+color: #999999;
 } 
 input::-moz-placeholder, textarea::-moz-placeholder { 
-color: #cccccc; 
+color: #999999;
 } 
 input:-ms-input-placeholder, textarea:-ms-input-placeholder { 
-color: #cccccc; 
+color: #999999;
 } 
 input{text-indent: 10px;}
 .fl {
