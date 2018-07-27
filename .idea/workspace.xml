@@ -3,19 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="ae8bf6b5-d811-4590-aeb5-fb271b574cd5" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/analze.html" afterPath="$PROJECT_DIR$/analze.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/analzeER.html" afterPath="$PROJECT_DIR$/analzeER.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/carManage.html" afterPath="$PROJECT_DIR$/carManage.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/car_manage.css" afterPath="$PROJECT_DIR$/css/car_manage.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/danger.css" afterPath="$PROJECT_DIR$/css/danger.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/header.css" afterPath="$PROJECT_DIR$/css/header.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/index.css" afterPath="$PROJECT_DIR$/css/index.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/jianguanTongji.css" afterPath="$PROJECT_DIR$/css/jianguanTongji.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/jianguanTongjiOne.css" afterPath="$PROJECT_DIR$/css/jianguanTongjiOne.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/reset.css" afterPath="$PROJECT_DIR$/css/reset.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/qiyeCarManage.html" afterPath="$PROJECT_DIR$/qiyeCarManage.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/qiyeManage.html" afterPath="$PROJECT_DIR$/qiyeManage.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/header.js" afterPath="$PROJECT_DIR$/js/header.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -53,16 +41,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
               <caret line="0" column="30" lean-forward="false" selection-start-line="0" selection-start-column="30" selection-end-line="0" selection-end-column="30" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="jianguanTongji.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/jianguanTongji.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="228">
-              <caret line="12" column="43" lean-forward="false" selection-start-line="12" selection-start-column="43" selection-end-line="12" selection-end-column="43" />
               <folding />
             </state>
           </provider>
@@ -133,11 +111,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="jianguanTongjiOne.css" pinned="false" current-in-tab="true">
+      <file leaf-file-name="jianguanTongjiOne.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/css/jianguanTongjiOne.css">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
               <caret line="0" column="24" lean-forward="false" selection-start-line="0" selection-start-column="24" selection-end-line="0" selection-end-column="24" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="header.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/js/header.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="456">
+              <caret line="24" column="27" lean-forward="true" selection-start-line="24" selection-start-column="27" selection-end-line="24" selection-end-column="27" />
               <folding />
             </state>
           </provider>
@@ -200,7 +188,6 @@
         <option value="$PROJECT_DIR$/jianguanTongji.html" />
         <option value="$PROJECT_DIR$/js/index.js" />
         <option value="$PROJECT_DIR$/car_manage.html" />
-        <option value="$PROJECT_DIR$/js/header.js" />
         <option value="$PROJECT_DIR$/jianguanTongjiOne.html" />
         <option value="$PROJECT_DIR$/css/car_manage.css" />
         <option value="$PROJECT_DIR$/css/reset.css" />
@@ -215,6 +202,7 @@
         <option value="$PROJECT_DIR$/css/header.css" />
         <option value="$PROJECT_DIR$/css/index.css" />
         <option value="$PROJECT_DIR$/css/jianguanTongjiOne.css" />
+        <option value="$PROJECT_DIR$/js/header.js" />
       </list>
     </option>
   </component>
@@ -318,7 +306,7 @@
       <workItem from="1531901200643" duration="17020000" />
       <workItem from="1531968519446" duration="17427000" />
       <workItem from="1531995201634" duration="7774000" />
-      <workItem from="1532678770424" duration="12249000" />
+      <workItem from="1532678770424" duration="12693000" />
     </task>
     <task id="LOCAL-00001" summary="111">
       <created>1531912144115</created>
@@ -362,11 +350,18 @@
       <option name="project" value="LOCAL" />
       <updated>1532001266948</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="111">
+      <created>1532693072187</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1532693072187</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="60483000" />
+    <option name="totallyTimeSpent" value="60927000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="137" y="47" width="1528" height="997" extended-state="0" />
@@ -485,9 +480,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="266">
           <caret line="14" column="42" lean-forward="false" selection-start-line="14" selection-start-column="42" selection-end-line="14" selection-end-column="42" />
-          <folding>
-            <marker date="1532001011014" expanded="true" signature="671:684" ph="..." />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -591,9 +584,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="266">
           <caret line="14" column="42" lean-forward="false" selection-start-line="14" selection-start-column="42" selection-end-line="14" selection-end-column="42" />
-          <folding>
-            <marker date="1532001011014" expanded="true" signature="671:684" ph="..." />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -707,16 +698,6 @@
         <state relative-caret-position="1976">
           <caret line="104" column="10" lean-forward="true" selection-start-line="104" selection-start-column="10" selection-end-line="104" selection-end-column="10" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/header.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="437">
-          <caret line="23" column="27" lean-forward="true" selection-start-line="23" selection-start-column="27" selection-end-line="23" selection-end-column="27" />
-          <folding>
-            <marker date="1532001011014" expanded="true" signature="671:684" ph="..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -900,6 +881,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="24" lean-forward="false" selection-start-line="0" selection-start-column="24" selection-end-line="0" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/header.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="456">
+          <caret line="24" column="27" lean-forward="true" selection-start-line="24" selection-start-column="27" selection-end-line="24" selection-end-column="27" />
           <folding />
         </state>
       </provider>
