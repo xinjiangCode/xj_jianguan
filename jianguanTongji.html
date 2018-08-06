@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Cache-Control" CONTENT="no-cache">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta name="format-detection" content="telephone=no" />
+    <title>监管平台</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/jianguanTongji.css">
+    <script src="js/jquery-3.2.1.min.js"></script>
+</head>
+<body>
+<script src="./js/header.js"></script>
+	<!-- 监管统计 二级页面 -->
+	<div class="main_main">
+        <div class="clearfix">
+            <div class="fr" style="margin-top: 21px; margin-right: 30px">
+                <input type="text" class="date-input laydate-icon" placeholder="请选择时间" id="test1">
+                <span style="height: 38px;line-height: 38px;">&nbsp;-&nbsp; </span>
+                <input type="text" class="date-input laydate-icon" placeholder="请选择时间" id="test2">
+
+                <span class="btn search_btn">查询</span>
+            </div> 
+        </div>  
+        <div class="cont">
+            <ul class="clearfix">
+                <li>
+                    <div class="info_top">
+                        <div class="fl" style="height: 100%;">
+                            <span class="total_num">1200</span>
+                            <span class="num_unit">笔</span>
+                        </div>
+                        <img class="fr img" src="images/jiaoyi_order.png" alt="">
+                    </div>
+                    <div class="info_ts_title blue">总交易订单</div>
+                </li>
+                <li>
+                    <div class="info_top">
+                        <div class="fl" style="height: 100%;">
+                            <span class="total_num">20</span>
+                            <span class="num_unit">笔</span>
+                        </div>
+                        <img class="fr img" src="images/daiyunshu.png" alt="">
+                    </div>
+                    <div class="info_ts_title qian_blue">待运输交易</div>
+                </li> 
+                <li>
+                    <div class="info_top">
+                        <div class="fl" style="height: 100%;">
+                            <span class="total_num">160</span>
+                            <span class="num_unit">笔</span>
+                        </div>
+                        <img class="fr img" src="images/yunshuing.png" alt="">
+                    </div>
+                    <div class="info_ts_title blue">在途运输</div>
+                </li>
+                <li>
+                    <div class="info_top">
+                        <div class="fl" style="height: 100%;">
+                            <span class="total_num">120</span>
+                            <span class="num_unit">笔</span>
+                        </div>
+                        <img class="fr img" src="images/success_order.png" alt="">
+                    </div>
+                    <div class="info_ts_title qian_blue">已完成运输</div>
+                </li> 
+                <li>
+                    <div class="info_top">
+                        <div class="fl" style="height: 100%;">
+                            <span class="total_num">1200</span>
+                            <span class="num_unit">笔</span>
+                        </div>
+                        <img class="fr img" src="images/jiaoyi_order.png" alt="">
+                    </div>
+                    <div class="info_ts_title blue">总交易订单</div>
+                </li>
+                <li>
+                    <div class="info_top">
+                        <div class="fl" style="height: 100%;">
+                            <span class="total_num">20</span>
+                            <span class="num_unit">笔</span>
+                        </div>
+                        <img class="fr img" src="images/daiyunshu.png" alt="">
+                    </div>
+                    <div class="info_ts_title qian_blue">待运输交易</div>
+                </li> 
+                <li>
+                    <div class="info_top">
+                        <div class="fl" style="height: 100%;">
+                            <span class="total_num">160</span>
+                            <span class="num_unit">笔</span>
+                        </div>
+                        <img class="fr img" src="images/yunshuing.png" alt="">
+                    </div>
+                    <div class="info_ts_title blue">在途运输</div>
+                </li>
+            </ul>
+            <div class="order_zoushi">
+                <div class="order_zoushi_title">订单走势</div>
+                <div id="container" style="height: 358px;"></div>
+            </div>
+        </div>
+    </div>
+    <script src="js/common.js"></script>
+    <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/echarts.min.js"></script>
+    <script src="laydate/laydate.js"></script> <!-- 改成你的路径 -->
+    <script>
+        laydate({
+            elem: '#test1',
+            format: 'YYYY-MM-DD',
+            istime: false,
+            choose: function(dates){ //选择好日期的回调
+                startTime = dates;
+            }   
+        });
+        laydate({
+            elem: '#test2',
+            format: 'YYYY-MM-DD',
+            istime: false,
+            choose: function(dates){ //选择好日期的回调
+                endTime = dates;
+            } 
+        });
+        laydate.skin('yahui');  //加载皮肤，参数lib为皮肤名
+    </script>
+
+    <script type="text/javascript">
+        var dom = document.getElementById("container");
+        var myChart = echarts.init(dom);
+        var app = {};
+        option = null;
+        app.title = '堆叠柱状图';
+
+        option = {
+            tooltip : {
+                trigger: 'axis',
+                axisPointer : {            // 坐标轴指示器，坐标轴触发有效
+                    type : 'shadow'        // 默认为直线，可选为：'line' | 'shadow'
+                }
+            },
+            legend: {
+                data:['直接访问','邮件营销','联盟广告']
+            },
+            grid: {
+                left: '3%',
+                right: '4%',
+                bottom: '3%',
+                containLabel: true
+            },
+            xAxis : [
+                {
+                    type : 'category',
+                    data : ['周一','周二','周三','周四','周五','周六','周日']
+                }
+            ],
+            yAxis : [
+                {
+                    type : 'value'
+                }
+            ],
+            series : [
+                {
+                    name:'订单量',
+                    type:'bar',
+                    color: '#31b89a',
+                    width: '29px',
+                    data:[320, 332, 301, 334, 390, 330, 320],
+                    barWidth: 29
+                },
+                {
+                    name:'同比量',
+                    type:'bar',
+                    width: '29px',
+                    color: '#0c5869',
+                    data:[220, 182, 191, 234, 290, 330, 310],
+                    barWidth: 29
+                }
+            ]
+        };
+        ;
+        if (option && typeof option === "object") {
+            myChart.setOption(option, true);
+        }
+    </script>
+
+</body>
+</html>

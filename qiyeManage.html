@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Cache-Control" CONTENT="no-cache">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta name="format-detection" content="telephone=no" />
+    <title>监管平台</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/header.css">
+    <!--<link rel="stylesheet" href="css/login.css">-->
+    <style>
+        *{box-sizing: border-box}
+        .pubTitle{height: 208px;width: 100%;min-width: 1200px;background: url("./images/cf_pubTitleBack.png") center center/100% 100%;}
+        .clearFloat::after,.clearFloat::before{content: "";clear: both;display: block;}
+        .main{background-color: #f3f3f3;width: 100%;padding-bottom: 60px;}
+        .container{
+            width: 1200px;margin: 0 auto;
+            /*box-shadow: 0 4px 10px 4px #e2e2e2 ;*/
+            /*border: 1px solid #e2e2e2;*/
+            padding: 20px 20px 60px 20px;background-color: #f7f7f7;}
+        .monitor{width: 724px;height: 713px;background-color: #fdfdfd;}
+        .monitorList{margin-bottom: 15px;}
+        .monitorList li{width: 181px;height: 40px;line-height: 40px;text-align: center;color: #666666;font-size: 16px;float: left;}
+        .monitorList li:hover{background-color: #5892f5;color: white;box-shadow: 2px 2px 6px 2px #e2e2e2;}
+        .monitorList li.on{background-color: #5892f5;color: white;box-shadow: 2px 2px 6px 2px #e2e2e2;}
+        .listBox td{ text-align: center; margin: 0;padding: 0; }
+        .listBox thead{background-color: #fafafa;border: 1px solid #ebedf0;font-size: 16px;color: #333333;}
+        .listBox tbody{color: #666666;font-size: 14px;}
+        .listBox  td,.listBox  th{height: 40px;line-height: 40px;}
+         table{width: 100%; border-spacing:0;}
+        .containerLeft{width: 420px;height: 710px;overflow-y: auto;}
+        .search{height: 35px;line-height: 35px;width: 420px;border: 1px solid #ebedf0;}
+        .searchList{margin-top: 15px;}
+        .searchList li{width: 420px;height: 100px;padding:18px 22px;background-color: #fdfdfd;margin-bottom: 2px;font-size: 14px;color: #666666;}
+        .searchList li:hover{border: 1px solid #91b4f2;box-shadow: 0 0 10px 1px #91b4f2 ;}
+        .searchList li.on{border: 1px solid #91b4f2;box-shadow: 0 0 10px 1px #91b4f2 ;}
+        .searchListTitle{font-size: 16px;color: #333333;}
+        .yundan{color: #5892f5;}
+        .qiyeInfo,.qiyeData,.orderData,.baoJingData{width: 688px;height: 145px;border: 1px solid #ebedf0;padding:15px 12px;;margin: 0 auto;margin-bottom: 10px}
+        .qiyeInfoTitle,.qiyeDataTitle,.orderDataTitle,.baoJingDataTitle{border-left: 4px solid #558ff8;padding-left: 10px;font-size: 16px;color: #333333;margin-bottom: 9px; }
+        .qiyeInfoText,.qiyeDataText,.orderDataText,.baoJingDataText{line-height: 28px;font-size: 14px;color: #666666;margin-left: 9px;}
+        .qiyeData{height: 90px;}
+
+        .daoru span {
+            display: inline-block;
+            width: 110px;
+            height: 35px;
+            color: #FFF;
+            line-height: 35px;
+            font-size: 15px;
+            text-align: center;
+            background: #5892f5;
+            outline: none;
+            cursor: pointer;
+            margin-right: 17px;
+            float: right;
+        }
+
+        .daoru {
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+<script src="./js/jquery-3.2.1.min.js"></script>
+<script src="./js/header.js"></script>
+    <div class="main">
+        <div class="container clearfix">
+
+            <div class="containerLeft" style="float: left;">
+                <div class="search" style="background-color: #fdfdfd;">
+                    <div style="float: left;height: 34px;line-height: 34px;width: 375px;border-right: 1px solid #ebedf0;overflow: hidden;background-color: #fdfdfd;">
+                        <input type="text" placeholder="请输入" style="    float: left;border: none;outline: none;width: 100%;height: 100%;background-color: #fdfdfd;">
+                    </div>
+                    <img src="./images/cf_search.png" alt="" style="margin-left: 13px;">
+                </div>
+                <div>
+                    <ul class="searchList">
+                        <li class="clearfix">
+                            <div class="clearfix">
+                                <div class="searchListTitle fl">企业名称</div>
+                                <div class="fr"><span>车辆： </span><span>20</span> <span>人员：</span> <span>20</span></div>
+                            </div>
+                             <div class="clearfix" style="margin-top: 25px;">
+                                 <div class="searchAddress fl">新疆省乌鲁木齐市XXXX区XXXX</div>
+                                 <div class="yundan fr"><span>运单：</span><span>20000</span></div>
+                             </div>
+                        </li>
+                        <li class="clearfix">
+                            <div class="clearfix">
+                                <div class="searchListTitle fl">企业名称</div>
+                                <div class="fr"><span>车辆： </span><span>20</span> <span>人员：</span> <span>20</span></div>
+                            </div>
+                            <div class="clearfix" style="margin-top: 25px;">
+                                <div class="searchAddress fl">新疆省乌鲁木齐市XXXX区XXXX</div>
+                                <div class="yundan fr"><span>运单：</span><span>20000</span></div>
+                            </div>
+                        </li>
+                        <li class="clearfix on">
+                            <div class="clearfix">
+                                <div class="searchListTitle fl">企业名称</div>
+                                <div class="fr"><span>车辆： </span><span>20</span> <span>人员：</span> <span>20</span></div>
+                            </div>
+                            <div class="clearfix" style="margin-top: 25px;">
+                                <div class="searchAddress fl">新疆省乌鲁木齐市XXXX区XXXX</div>
+                                <div class="yundan fr"><span>运单：</span><span>20000</span></div>
+                            </div>
+                        </li>
+                        <li class="clearfix">
+                            <div class="clearfix">
+                                <div class="searchListTitle fl">企业名称</div>
+                                <div class="fr"><span>车辆： </span><span>20</span> <span>人员：</span> <span>20</span></div>
+                            </div>
+                            <div class="clearfix" style="margin-top: 25px;">
+                                <div class="searchAddress fl">新疆省乌鲁木齐市XXXX区XXXX</div>
+                                <div class="yundan fr"><span>运单：</span><span>20000</span></div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="monitor" style="float: right;">
+                <ul class="monitorList clearfix">
+                    <li class="on">全部</li>
+                    <li>车辆</li>
+                    <li>物流订单</li>
+                    <li>交易订单</li>
+                </ul>
+
+                <div class="qiyeInfo">
+
+                    <div class="qiyeInfoTitle">企业信息</div>
+                    <div class="qiyeInfoText">
+                        <span>企业名称：</span><span style="width: 170px;display: inline-block;">新疆XXXX化工集团</span>
+                        <span>注册资金：</span><span>100万</span>
+                    </div>
+                    <div class="qiyeInfoText">
+                        <span>公司地址：</span><span></span>
+                    </div>
+                    <div class="qiyeInfoText">
+                        <span>身份类型：</span><span></span>
+                    </div>
+                </div>
+
+                <div class="qiyeData">
+                    <div class="qiyeDataTitle">企业数据</div>
+                    <div class="qiyeDataText">
+                        <span>员工数量：</span><span style="width: 170px;display: inline-block;">50</span>
+                        <span>车辆数量：</span><span>200</span>
+                    </div>
+                </div>
+
+                <div class="orderData">
+                    <div class="orderDataTitle">订单数据</div>
+                    <div class="orderDataText">
+                        <span>订单总量：</span><span style="width: 170px;display: inline-block;">1000000</span>
+                        <span>进行中的订单：</span><span style="width: 170px;display: inline-block;">10000</span>
+                        <span>已完成运输：</span><span>100吨</span>
+                    </div>
+                    <div class="orderDataText">
+                        <span>订单总量：</span><span style="width: 170px;display: inline-block;">50000吨</span>
+                        <span>进行中的订单：</span><span style="width: 170px;display: inline-block;">1000</span>
+                    </div>
+                    <div class="orderDataText">
+                        <span>在途运输：</span><span style="width: 170px;display: inline-block;">1000吨</span>
+                    </div>
+                </div>
+
+                <div class="baoJingData">
+                    <div class="baoJingDataTitle">报警数据</div>
+                    <div class="baoJingDataText">
+                        <span>总&nbsp;&nbsp;违&nbsp;&nbsp;章：</span><span style="width: 170px;display: inline-block;">100</span>
+                        <span>近七天违章：</span><span style="width: 170px;display: inline-block;">10</span>
+                    </div>
+                    <div class="baoJingDataText">
+                        <span>今日违章：</span><span style="width: 170px;display: inline-block;">1</span>
+                    </div>
+                    <div class="baoJingDataText">
+
+                    </div>
+                </div>
+                <div class="daoru clearfix"><span>导入</span></div>
+            </div>
+
+        </div>
+    </div>
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/echarts.min.js"></script>
+    <script src="js/common.js"></script>
+    <script>
+
+    </script>
+</body>
+</html>

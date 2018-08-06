@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link href="css/reset.css" rel="stylesheet">
+    <link href="css/header.css" rel="stylesheet">
+    <link href="css/index.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/page.css">
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/echarts.min.js"></script>   
+</head>
+<body>
+<script src="js/header.js"></script>
+    <div class="page" style="padding-top: 20px;">
+        <div class="center">
+    <!--运输-->
+            <div class="transport">
+                <ul>
+                    <li class="li1">
+                        <p>1200</p>
+                        <span>总交易订单</span>
+                        <h1 class="cach1"><img src="images/jiaoyi_order.png" style="float: left;"></h1>
+                        <h2><em>26.00%<i><img src="images/shang.png"></i></em><em class="tong">同比上周</em></h2>
+                    </li>
+                    <li  class="li2">
+                        <p>20</p>
+                        <span>待运输交易</span>
+                        <h1 class="cach2"><img src="images/daiyunshu.png"></h1>
+                        <h2><em>26.00%<i><img src="images/shang.png"></i></em><em class="tong">同比上周</em></h2>
+                    </li>
+                    <li  class="li3">
+                        <p>160</p>
+                        <span>在途运输</span>
+                        <h1 class="cach3"><img src="images/yunshuing.png"></h1>
+                        <h2><em>26.00%<i><img src="images/1.png"></i></em><em class="tong">同比上周</em></h2>
+                    </li>
+                    <li  class="li4">
+                        <p>120</p>
+                        <span>已完成运输</span>
+                        <h1 class="cach4"><img src="images/success_order.png"></h1>
+                        <h2><em>26.00%<i><img src="images/1.png"></i></em><em class="tong">同比上周</em></h2>
+                    </li>
+                </ul>
+            </div>
+    <!--订单走势-->  
+            <div class="order">
+                <div class="left">
+                    <div class="timu" style="font-size: 14px;">
+                        <p>订单走势</p>
+                        <ul class="ding">
+                            <li>订单量</li>
+                            <li>待运输</li>
+                            <li>在途</li>
+                            <li class="finesh">已完成</li>
+                        </ul>
+                    </div>
+                    <div class="xian" id="main"></div>
+                    <div class="date">
+                        <p>
+                            <input type="text" class="demo-input" placeholder="请选择时间"><i>—</i>
+                            <input type="text" class="demo-input" placeholder="请选择时间">
+                        </p>
+                    </div>
+                </div>
+                <div class="right">
+                        <p style="font-size: 16px;">危化品</p>
+                        <div class="list1">
+                            <ul class="danger">
+                                <li>化学品名称</li>
+                                <li>订单量</li>
+                                <li>占比</li>
+                                <li>周环比</li>
+                            </ul>
+                        </div>
+                        <div class="json1"></div>
+                </div>
+            </div> 
+    <!--订单列表-->    
+            <div class="list">
+                <span style="font-size: 16px;">订单列表</span>
+                <p>
+                    <input type="text" class="demo-input" placeholder="请选择时间" id="test1"><i>—</i>
+                    <input type="text" class="demo-input" placeholder="请选择时间" id="test2">
+                    <input type="text" class="serch" placeholder="企业名称、危化品名称">
+                    <button>搜索</button>
+                    <button>导出</button>
+                </p>
+            </div> 
+            <div class="dingdan">
+                <div class="title">
+                    <ul>
+                        <li class="menu">
+                            <span class="dan1">下单时间</span>
+                            <span class="dan2">产品名称</span>
+                            <span class="dan3">吨数</span>
+                            <span class="dan4">卖方公司</span>
+                            <span class="dan5">买方公司</span>
+                            <span class="dan6">承运公司</span>
+                            <span class="dan7">订单编号</span>
+                            <span class="dan8">所在地区</span>
+                            <span class="dan9">状态</span>
+                            <span class="dan10">操作</span>
+                        </li>
+                    </ul>    
+                </div>
+                <div class="titleli">
+                    <ul>
+                        <li>
+                            <span class="dan1">2015-09-09 12:30</span>
+                            <span class="dan2">片碱</span>
+                            <span class="dan3">150</span>
+                            <span class="dan4">新疆XXXX有限公司</span>
+                            <span class="dan5">新疆XXXX有限公司</span>
+                            <span class="dan6">新疆XXXX有限公司</span>
+                            <span class="dan7">100000000000000</span>
+                            <span class="dan8">新疆乌鲁木齐</span>
+                            <span class="dan9">已到达</span>
+                            <span class="dan10 seeDetail">查看</span>
+                        </li>
+                        <li class="licolor">
+                                <span class="dan1">2015-09-09 12:30</span>
+                                <span class="dan2">片碱</span>
+                                <span class="dan3">150</span>
+                                <span class="dan4">新疆XXXX有限公司</span>
+                                <span class="dan5">新疆XXXX有限公司</span>
+                                <span class="dan6">新疆XXXX有限公司</span>
+                                <span class="dan7">100000000000000</span>
+                                <span class="dan8">新疆乌鲁木齐</span>
+                                <span class="dan9">已到达</span>
+                                <span class="dan10 seeDetail">查看</span>
+                            </li>
+                            <li>
+                                    <span class="dan1">2015-09-09 12:30</span>
+                                    <span class="dan2">片碱</span>
+                                    <span class="dan3">150</span>
+                                    <span class="dan4">新疆XXXX有限公司</span>
+                                    <span class="dan5">新疆XXXX有限公司</span>
+                                    <span class="dan6">新疆XXXX有限公司</span>
+                                    <span class="dan7">100000000000000</span>
+                                    <span class="dan8">新疆乌鲁木齐</span>
+                                    <span class="dan9">已到达</span>
+                                    <span class="dan10 seeDetail">查看</span>
+                                </li>
+                        
+                    </ul>    
+                </div>
+                
+            </div>
+            <div class="" style="text-align: center;height: 75px;padding-top: 17px;margin-bottom: 0;">
+                <ul class="pagination" id="page1" style="position: static;margin-bottom: 0;"></ul>
+                <div class="pageJump">
+                    <span class="allPageN">1/200</span>
+                    <i style="margin-left: 12px;">共200页</i>，
+                    <span>到第</span>
+                    <input type="text"/>
+                    <span>页</span>
+                    <button type="button" class="button">GO</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="js/index.js"></script>
+<script src="./js/pager.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/common.js"></script>
+<script src="./laydate/laydate.js"></script> <!-- 改成你的路径 -->
+<script>
+    $('.objListBox>div:nth-child(5n)').css('margin-right','0');
+    Page({
+        num: 200,
+        elem: $('#page1'),
+        callback: function(n) {
+            console.log(n);
+        }
+    });
+    sessionStorage.setItem("topTitleIndex",0);
+
+    laydate({
+        elem: '#test1',
+        format: 'YYYY-MM-DD',
+        istime: false,
+        choose: function(dates){ //选择好日期的回调
+            startTime = dates;
+        }
+    });
+    laydate({
+        elem: '#test2',
+        format: 'YYYY-MM-DD',
+        istime: false,
+        choose: function(dates){ //选择好日期的回调
+            endTime = dates;
+        }
+    });
+    laydate.skin('yahui');  //加载皮肤，参数lib为皮肤名
+
+    $(".seeDetail").click(function () {
+        window.location.href="./car_manage.html";
+    })
+</script>
+    
+</body>
+</html>
